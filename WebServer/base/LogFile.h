@@ -12,7 +12,7 @@ public:
     LogFile(const std::string& basename, int flushEveryN = 1024);
     ~LogFile();
 
-    void appen(const char* logline, int len);
+    void append(const char* logline, int len);
     void flush();
     bool rollFile();
 private:

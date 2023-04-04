@@ -16,7 +16,7 @@ LogFile::~LogFile() {
 }
 
 
-void LogFile::appen(const char* logline, int len) {
+void LogFile::append(const char* logline, int len) {
     MutexLockGuard(*m_mutex);
     append_unlock(logline, len);
 }

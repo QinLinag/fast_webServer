@@ -3,7 +3,7 @@
 
 #include <pthread.h>
 #include <cstdio>
-#include <noncopyable.h>
+#include "noncopyable.h"
 
 class MutexLock : noncopyable{
 friend class Condition;

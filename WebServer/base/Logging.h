@@ -35,4 +35,6 @@ private:
     static std::string m_logFileName;
 };
 
+#define LOG Logger(__FILE__, __LINE__).stream()
+
 #endif

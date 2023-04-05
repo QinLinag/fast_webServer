@@ -26,15 +26,15 @@ public:
         }
     }
     
-    const char* getData() { return m_data;}
-    int getLength() const { return static_cast<int>(m_cur - m_data;)}
+    const char* getData() const { return m_data;}
+    int getLength() const { return static_cast<int>(m_cur - m_data);}
 
     char* getCur() { return m_cur;}
     int avail() const { return static_cast<int>(end() - m_cur);}
     void add(size_t len) { m_cur += len;}
 
-    void reset() { m_cur = m_data};
-    void bzero() { memset(m_data, sizeof m_data);}
+    void reset() { m_cur = m_data;}
+    void bzero() { memset(m_data, sizeof m_data, 0);}
 private:
     const char* end() const { return m_data + sizeof m_data;}
     char m_data[SIZE];

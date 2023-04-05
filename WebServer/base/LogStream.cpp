@@ -96,7 +96,7 @@ LogStream& LogStream::operator<<(long double v) {
 void staticCheck();
 
 template<typename T>
-void LogStream::formatInteger(T) {
+void LogStream::formatInteger(T v) {
     //buffer容不下kMaxNumericSize个字符的话就会被直接丢弃
     if(m_buffer.avail() >= kMaxNumericSize) {
         size_t len = convert<T>(m_buffer.getCur(), v);

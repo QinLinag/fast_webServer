@@ -29,6 +29,8 @@ Logger::Logger(const char* fileName, int line)
 Logger::~Logger() {
     m_impl.m_stream << "--" << m_impl.m_basename
         << ":" << m_impl.m_line << "\n";
+    const LogStream::Buffer& buf(stream().getBuffer());
+    output(buf.getData(), buf.getLength());
 }
 
 Logger::Impl::Impl(const char* fileName, int line)

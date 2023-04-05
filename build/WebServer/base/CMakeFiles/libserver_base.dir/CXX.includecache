@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qinliang/webServer/WebServer/base/LogStream.cpp
+LogStream.h
+/home/qinliang/webServer/WebServer/base/LogStream.h
+assert.h
+-
+stdint.h
+-
+stdio.h
+-
+string.h
+-
+algorithm
+-
+limits
+-
+
+/home/qinliang/webServer/WebServer/base/LogStream.h
+assert.h
+-
+string.h
+-
+string
+-
+noncopyable.h
+/home/qinliang/webServer/WebServer/base/noncopyable.h
+
+/home/qinliang/webServer/WebServer/base/noncopyable.h
+

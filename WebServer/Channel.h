@@ -48,6 +48,14 @@ public:
     void setRevents(__uint32_t ev) { m_revents = ev;}
     void setEvents(__uint32_t ev) { m_events = ev;}
 
+    std::shared_ptr<HttpData> getHolder() { 
+        std::shared_ptr<HttpData> ret(m_holder.lock());
+        if(ret) {
+            return ret;
+        }
+        return nullptr;
+    }
+    
     __uint32_t& getEvents() { return m_events;}
     __uint32_t& getLastEvents() { return m_lastEvents;}
 

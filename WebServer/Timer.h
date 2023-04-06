@@ -15,7 +15,6 @@ class TimerNode {
 public:
     TimerNode(std::shared_ptr<HttpData> requestData, int timeout);
     ~TimerNode();
-    TimerNode();
     TimerNode(TimerNode &tn);
     void update(int timeout);
     bool isValid();

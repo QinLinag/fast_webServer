@@ -17,4 +17,4 @@ start函数中执行了thread的start函数开启pthread_create。
 LOG << "这是日志";  然后LOG是无名对象，当Logger析构是，调用了output函数，Logger对象
 会将其内部类impl中的stream的buffer数据给到output，最后output函数中，调用了asyncLogging
 将数据append到asyncLogging中，然后调用asyncLogging.start函数启动线程，将数据写入日志
-文件
+文件   lala

@@ -29,7 +29,7 @@ EventLoop* EventLoopThreadPool::getNextLoop() {
     EventLoop* loop = m_baseLoop;
     if(!m_loops.empty()) {
         loop = m_loops[m_next];
-        m_next = (m_next + 1) % m_numThreads;
+        m_next = (m_next + 1) % m_numThreads;//这里使用的轮询策略，每次有客户端连接来了，就轮询拿出一个线程
     }
     return loop;
 }

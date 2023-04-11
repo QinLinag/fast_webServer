@@ -248,6 +248,11 @@ void HttpData::handleRead() {
             }
         }
     } while(false);
+
+    if(!m_error) {
+        handleWrite();
+    }
+
     if(!m_error && m_state == STATE_FINISH)  {
         this->reset();
         if(m_inBuffer.size() > 0) {
@@ -287,7 +292,7 @@ void HttpData::handleConn() {
             }
             if((events_ & EPOLLIN) && (events_ & EPOLLOUT)) {
                 events_ = __uint32_t(0);
-                events_ |= EPOLLOUT;
+                events_ |= EPOLLOUT; //epollout是从不可写到可写转变时触发，
             }
             events_ |= EPOLLET;
             m_loop->updatePoller(m_channel, timeout);
@@ -342,8 +347,8 @@ URIState HttpData::parseURI() {
     }
     //去掉请求行所占的空间， 节省空间
     std::string request_line = str.substr(0, pos);
-    if(str.size() > pos + 1) {
-        str = str.substr(pos + 1);
+    if(str.size() > pos + 1) { //这里说明除了有请求行的数据，还有headers，body等数据需要处理
+        str = str.substr(pos + 1);//请求行数据已经保存到了request_line里面了，str就可以将请求行数据截断了，
     } else {
         str.clear();
     }
@@ -364,6 +369,9 @@ URIState HttpData::parseURI() {
         return PARSE_URI_ERROR;
     }
 
+    //请求行包含内容：请求方法，url，协议版本
+    //如：GET /root/index.html HTTP/1.1
+
     //filename
     pos = request_line.find("/", pos);
     if(pos < 0) {
@@ -379,7 +387,7 @@ URIState HttpData::parseURI() {
                 m_fileName = request_line.substr(pos + 1, _pos - pos -1);
                 size_t __pos = m_fileName.find('?');
                 if(__pos >= 0) {
-                    m_fileName = m_fileName.substr(0, __pos);
+                    m_fileName = m_fileName.substr(0, __pos);//去掉路径参数，
                 }
             } else {
                 m_fileName = "index.html";
@@ -409,7 +417,7 @@ URIState HttpData::parseURI() {
 }
 
 HeaderState HttpData::parseHeaders() {
-    std::string& str = m_inBuffer;
+    std::string& str = m_inBuffer; //请求行已经处理完成
     int key_start = -1, key_end = -1, vaule_start = -1, value_end = -1;
     int now_read_line_begin = 0;
     bool notFinish = true;
@@ -426,7 +434,8 @@ HeaderState HttpData::parseHeaders() {
                 break;
             }
             case H_KEY: {
-                if(str[i] == ':') {
+                if(str[i] == ':') { //一直循环到':',key-start和key-end之间的字符串就是key了，
+                    key_end = i;
                     if(key_end - key_start <= 0) {
                         return PARSE_HEADER_ERROR;
                     }
@@ -450,7 +459,7 @@ HeaderState HttpData::parseHeaders() {
                 break;
             }
             case H_VALUE :{
-                if(str[i] == '\r') {
+                if(str[i] == '\r') {  //一直循环到i指向'\r',value_start和value_end之间的字符就是value了，
                     m_hState = H_CR;
                     value_end = i;
                     if(value_end - vaule_start <= 0) {
@@ -499,7 +508,7 @@ HeaderState HttpData::parseHeaders() {
         }
     }
     if(m_hState == H_END_LF) {
-        str = str.substr(i);
+        str = str.substr(i); //header处理完后，str截断header部分,
         return PARSE_HEADER_SUCCESS;
     }
     str = str.substr(now_read_line_begin);
@@ -523,7 +532,7 @@ AnalysisState HttpData::analysisRequest() {
                 + "\r\n";
         }
         int dot_pos = m_fileName.find('.');
-        std::string filetype;
+        std::string filetype;   //请求的文件的后缀，
         if(dot_pos < 0) {
             filetype = MimeType::getMime("default");
         } else {

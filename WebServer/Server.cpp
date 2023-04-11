@@ -28,7 +28,8 @@ void Server::start() {
     m_acceptChannel->setEvents(EPOLLIN | EPOLLET);
     m_acceptChannel->setReadHandler(std::bind(&Server::handNewConn, this));
     m_acceptChannel->setConnHandler(std::bind(&Server::handThisConn, this));
-    m_loop->addToPoller(m_acceptChannel, 0);
+    m_loop->addToPoller(m_acceptChannel, 0); //虽然Server start了，但是m_loop还没有start，也就是说m_loop虽然add了accepChannel,但是还不能接受客户端的连接，
+                                            //m_loop在main函数中手动start，此时才真正的开始接受客户端的连接
     m_started = true;
 }
 

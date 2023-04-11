@@ -23,7 +23,7 @@ public:
     void runInLoop(Functor&& cb);
     void queueInLoop(Functor&& cb);
     bool isInLoopThread() const { return m_threadId == CurrentThread::tid();}
-    void assertInLoopThread() { assert(isInLoopThread());}
+    void assertInLoopThread() { assert(isInLoopThread());}//EventLoop是某一个线程所拥有的，只属于创建EventLoop对象的线程所拥有，当某个线程执行eventloop时，需要断言是否是该线程拥有
     void shutDown(std::shared_ptr<Channel> channel) { shutDownWR(channel->getFd());}
     void removeFromPoller(std::shared_ptr<Channel> channel) {
         m_poller->epoll_del(channel);

@@ -61,8 +61,8 @@ void EventLoop::loop() {
 
 void EventLoop::quit() {
     m_quit = true;
-    if(!isInLoopThread()) {
-        wakeup();
+    if(!isInLoopThread()) {  //当前没有在EventLoop原来的线程中，
+        wakeup();   //唤醒EventLoop所属的线程，
     }
 }
 

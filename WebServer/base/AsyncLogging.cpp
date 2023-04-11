@@ -35,7 +35,7 @@ void AsyncLogging::append(const char* logline, int len) {
             m_currentBuffer.reset(new Buffer);
         }
         m_currentBuffer->append(logline, len);
-        m_cond.notify();
+        m_cond.notify();//生产者和消费者模型，
     }
 }
 
@@ -60,7 +60,7 @@ void AsyncLogging::threadFunc() {
         {
             MutexLockGuard lock(m_mutex);
             if(m_buffers.empty()) {
-                m_cond.waitForSeconds(m_flushInterval);
+                m_cond.waitForSeconds(m_flushInterval); //生产者和消费者模型，
             }
             m_buffers.push_back(m_currentBuffer);
             m_currentBuffer.reset();

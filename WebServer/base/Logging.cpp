@@ -18,7 +18,7 @@ void once_init() {
 }
 
 void output(const char* msg, int len) {
-    pthread_once(&once_control, once_init);
+    pthread_once(&once_control, once_init);  //只会执行一次，
     AsycnLogger->append(msg, len);
 }
 

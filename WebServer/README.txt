@@ -1,0 +1,57 @@
+webServer最主要的几个模块就是：HttpData，Epoll,EventLoop,EventLoopThread
+EventLoopThreadPool,Channel,
+
+
+Channel：每当有一个客户端和本webServer连接成功后，就会生成一个Channel对象，
+并被HttpData所拥有（HttpData也是客户端连接成功后就会生成一个），Channel中有
+一个getHolder函数，就是返回一个HttpData对象，也就是返回持有channel的对象。
+这个模块主要是和Epoll之间通信的，epoll监听每一个socket fd， 
+每当需要epoll_add一个事件，那么就传入一个Channel对象，这对象持有socket fd，
+每当有事件触发后，会调用handleEents，handleEvents根据监听的事件选择调用
+读事件的处理函数handleRead还是写事件的处理函数handleWrite。
+所以总结就是：Channel其实就是和Epoll打交道的，channel封装了处理socket fd事件
+触发的任务。
+
+HttpData: 这个模块就是真正的封装了客户端和服务端之间互相read和write接口，和
+http报文的解析（先read到m_inBuffer中然后解析m_inBuffer中http信息），然后
+通过解析出来http信息，然后生成相应的相应信息存放到m_outBuffer,最后通过write
+接口协会客户端。HttpData持有一个Channel对象，在HttpData构造函数中，就将自己
+的handleRead，handleWrite，handleConnction方法set给了Channel。监听事件
+触发，其实就是通过channel最终调用到httpData的方法。
+
+
+Epoll，就是封装了epoll一些了的api，实现了异步非阻塞的监听模型。其实没什么，学过
+epoll相关api的人都懂得，每有了解过的一定需要去学一下。Epoll中的epoll_add,
+epoll_del,epoll_mod,都是传入Channel对象。Epoll对象持有
+std::shared_ptr<Channel> m_fd2chan[MAXFDS];
+std::shared_ptr<HttpData> m_fd2http[MAXFDS];
+两个成员变量，用于保存监听的socket fd对应的Channel和HttpData对象，当epoll中
+poll函数epoll_wait返回fd时，可以通过m_fd2chan和m_fd2http两个成员变量查询。
+
+
+
+EventLoop: EventLoop模块主要是循环调用Epoll的poll函数。其实就是在Epoll基础
+上又封装了一下，同时增加了一些新功能，关键就是loop函数。
+EventLoop持有一个Epoll对象poller，loop函数就是不停的循环调用poller.poll函数
+
+
+
+EventLoopThread: 故名思议，就是每个EventLoop都配了一个线程，eventLoop的
+loop函数在各自的线程中执行。EventLoopThread持有一个Thread对象和一个EventLoop
+指针(EventLoopThread构造函数都还没有给这个指针赋值)，thread的执行函数是
+threadFun。调用eventLoopThread的startLoop函数，然后在startLoop函数中，
+调用了thread.start函数线程开始执行。然后threadFun中new了一个EventLoop对象
+赋值给了m_loop,最后在thread的执行函数threadFunc中执行了m_loop->loop,
+同时startLoop函数返回m_loop。
+
+
+
+
+
+
+
+
+
+
+
+

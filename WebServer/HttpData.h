@@ -127,7 +127,7 @@ private:
     void handleRead();
     void handleWrite();
     void handleConn();
-    void handleError(int fd, int err_num, std::string shot_msg);
+    void handleError(int fd, int err_num, std::string short_msg);
     URIState parseURI();
     HeaderState parseHeaders();
     AnalysisState analysisRequest();

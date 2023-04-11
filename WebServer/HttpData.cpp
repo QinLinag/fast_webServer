@@ -118,7 +118,7 @@ HttpData::HttpData(EventLoop* loop, int connfd)
     , m_fd(connfd)
     , m_error(false)
     , m_connectionState(H_CONNECTED)
-    , m_method(MEGHOD_GET)
+    , m_method(METHOD_GET)
     , m_HTTPVersion(HTTP_11)
     , m_state(STATE_PARSE_URI)
     , m_hState(H_START)
@@ -152,11 +152,14 @@ void HttpData::seperateTimer() {
 }
 
 void HttpData::handleClose() {
-
+    m_connectionState = H_DISCONNECTED;
+    std::shared_ptr<HttpData> guard(shared_from_this());
+    m_loop->removeFromPoller(m_channel);
 }
 
 void HttpData::newEvent() {
-
+    m_channel->setEvents(DEFAULT_EVENT);
+    m_loop->addToPoller(m_channel, DEFAULT_EXPIRED_TIME);
 }
 
 void HttpData::handleRead() {
@@ -307,8 +310,26 @@ void HttpData::handleConn() {
 }
 
 void HttpData::handleError(int fd, int err_num, 
-                    std::string shot_msg) {
+                    std::string short_msg) {
+    short_msg = " " + short_msg;
+    char send_buff[4096];
+    std::string body_buff, header_buff;
+    body_buff += "<html><titl>出错了</title>";
+    body_buff += "<body bgcolor=\"ffffff\">";
+    body_buff += std::to_string(err_num) + short_msg;
+    body_buff += "<hr><em> QinLiang web Server</em>\n</body></html>";
 
+    header_buff += "HTTP/1.1" + std::to_string(err_num) + short_msg + "\r\n";
+    header_buff += "Content-type: text/html\r\n"; 
+    header_buff += "Connection: Close\r\n";
+    header_buff += "Content-Length: " + std::to_string(body_buff.size()) + "\r\n";
+    header_buff += "Server: QinLiang web Server\r\n";
+    header_buff += "\r\n";
+    //错误处理不考虑writen不完的情况；
+    sprintf(send_buff, "%s", header_buff.c_str());
+    writen(fd, send_buff, strlen(send_buff));
+    sprintf(send_buff, "%s", body_buff.c_str());
+    writen(fd, send_buff, strlen(send_buff));
 }
 
 URIState HttpData::parseURI() {
@@ -388,10 +409,177 @@ URIState HttpData::parseURI() {
 }
 
 HeaderState HttpData::parseHeaders() {
-
+    std::string& str = m_inBuffer;
+    int key_start = -1, key_end = -1, vaule_start = -1, value_end = -1;
+    int now_read_line_begin = 0;
+    bool notFinish = true;
+    size_t i = 0;
+    for(; i < str.size() && notFinish; ++i) {
+        switch (m_hState) {
+            case H_START: {
+                if(str[i] == '\r' || str[i] == '\n'){
+                    break;
+                }
+                m_hState = H_KEY;
+                key_start = i;
+                now_read_line_begin = i;
+                break;
+            }
+            case H_KEY: {
+                if(str[i] == ':') {
+                    if(key_end - key_start <= 0) {
+                        return PARSE_HEADER_ERROR;
+                    }
+                    m_hState = H_COLON;
+                } else if(str[i] == '\n' || str[i] == '\r') {
+                    return PARSE_HEADER_ERROR;
+                }
+                break;
+            }
+            case H_COLON: {
+                if(str[i] == ' ') {
+                    m_hState = H_SPACES_AFTER_COLON;
+                } else {
+                    return PARSE_HEADER_ERROR;
+                }
+                break;
+            }
+            case H_SPACES_AFTER_COLON :{
+                m_state == H_VALUE;
+                vaule_start = i;
+                break;
+            }
+            case H_VALUE :{
+                if(str[i] == '\r') {
+                    m_hState = H_CR;
+                    value_end = i;
+                    if(value_end - vaule_start <= 0) {
+                        return PARSE_HEADER_ERROR;
+                    }
+                } else if(i - vaule_start > 255) {
+                    return PARSE_HEADER_ERROR;
+                }
+                break;
+            }
+            case H_CR : {
+                if(str[i] == '\n') {
+                    m_hState = H_LF;
+                    std::string key(str.begin() + key_start, str.begin() + key_end);
+                    std::string value(str.begin() + vaule_start, str.begin() + value_end);
+                    m_headers[key] = value;
+                    now_read_line_begin = i;
+                } else {
+                    return PARSE_HEADER_ERROR;
+                }
+                break;
+            }
+            case H_LF: {
+                if(str[i] == '\r') {
+                    m_hState = H_END_CR;
+                } else {
+                    key_start = i;
+                    m_hState = H_KEY;
+                }
+                break;
+            }
+            case H_END_CR :{
+                if(str[i] == '\n') {
+                    m_hState = H_END_LF;
+                } else {
+                    return PARSE_HEADER_ERROR;
+                }
+                break;
+            }
+            case H_END_LF :{
+                notFinish = false;
+                key_start = i;
+                now_read_line_begin = i;
+                break;
+            }
+        }
+    }
+    if(m_hState == H_END_LF) {
+        str = str.substr(i);
+        return PARSE_HEADER_SUCCESS;
+    }
+    str = str.substr(now_read_line_begin);
+    return PARSE_HEADER_AGAIN;
 }
 
 AnalysisState HttpData::analysisRequest() {
+    if(m_method == METHOD_POST) {
 
+    } else if(m_method == METHOD_GET 
+                    || m_method == METHOD_HEAD) {
+        std::string header;
+        header += "HTTP/1.1 200 OK\r\n";
+        if(m_headers.find("Connection") != m_headers.end()
+            && (m_headers["Connection"] == "Keep-Alive" ||
+                m_headers["Connection"] == "Keep-alive")) {
+            m_keepAlive = true;
+            header += std::string("Connection: Keep-Alive")
+                + "Keep-Alive: timeout="
+                + std::to_string(DEFAULT_KEEP_ALIVE_TIME)
+                + "\r\n";
+        }
+        int dot_pos = m_fileName.find('.');
+        std::string filetype;
+        if(dot_pos < 0) {
+            filetype = MimeType::getMime("default");
+        } else {
+            filetype = MimeType::getMime(m_fileName.substr(dot_pos));
+        }
+        //echo test
+        if(m_fileName == "hello") {
+            m_outBuffer =
+                "HTTP/1.1 200 OK\r\nContent-type: text/plain\r\n\r\nHello World";
+            return ANALYSIS_ERROR;
+        }
+        if(m_fileName == "favicon.ico") {
+            header += "Content-Type: image/png\r\n";
+            header += "Content-Length: " + std::to_string(sizeof favicon) + "\r\n"; 
+            header += "Server: QinLiang web Server\r\n";
+            header += "\r\n";
+            m_outBuffer += header;
+            m_outBuffer += std::string(favicon, favicon + sizeof favicon);
+            return ANALYSIS_SUCCESS;
+        }
+        
+        struct stat sbuf;
+        if(stat(m_fileName.c_str(), &sbuf) < 0) {
+            header.clear();
+            handleError(m_fd, 404, "Not Fount!");
+            return ANALYSIS_ERROR;
+        }
+        header += "Content-Type: image/png\r\n";
+        header += "Content-Length: " + std::to_string(sizeof favicon) + "\r\n"; 
+        header += "Server: QinLiang web Server\r\n";
+        //头部结束
+        header += "\r\n";
+        m_outBuffer += header;
+        
+        if(m_method == METHOD_HEAD) {
+            return ANALYSIS_SUCCESS;
+        }
+        int src_fd = open(m_fileName.c_str(), O_RDONLY, 0);
+        if(src_fd < 0) {
+            m_outBuffer.clear();
+            handleError(m_fd, 404, "Not Found!");
+            return ANALYSIS_ERROR;
+        }
+        void* mmapRet = mmap(nullptr, sbuf.st_size, PROT_READ, MAP_PRIVATE, src_fd, 0);
+        close(src_fd);
+        if(mmapRet == (void*)-1) {
+            munmap(mmapRet, sbuf.st_size);
+            m_outBuffer.clear();
+            handleError(m_fd, 404, "Not Found!");
+            return ANALYSIS_ERROR;
+        }
+        char* src_addr = static_cast<char*>(mmapRet);
+        m_outBuffer += std::string(src_addr, src_addr + sbuf.st_size);
+        munmap(mmapRet, sbuf.st_size);
+        return ANALYSIS_SUCCESS;
+    }
+    return ANALYSIS_ERROR;
 }
 

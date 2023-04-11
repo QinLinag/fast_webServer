@@ -38,7 +38,7 @@ bool TimerNode::isValid() {
     struct timeval now;
     gettimeofday(&now, nullptr);
     size_t tempTime = 
-        (((now.tv_sec % 10000) * 1000) + (now.tv_usec / 1000)) + timeout;
+        (((now.tv_sec % 10000) * 1000) + (now.tv_usec / 1000));
     if(tempTime < m_expiredTime) {
         return true;
     } else {

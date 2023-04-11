@@ -91,7 +91,7 @@ public:
     }
     void reset();
     void seperateTimer();
-    void LinkTimer(std::shared_ptr<TimerNode> mtimer) {
+    void linkTimer(std::shared_ptr<TimerNode> mtimer) {
         m_timer = mtimer;
     }
     std::shared_ptr<Channel> getChannel() {

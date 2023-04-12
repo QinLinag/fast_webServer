@@ -56,7 +56,7 @@ void Server::handNewConn() {
 
         std::shared_ptr<HttpData> req_info(new HttpData(loop, accept_fd));
         req_info->getChannel()->setHolder(req_info);
-        loop->queueInLoop(std::bind(&HttpData::newEvent, req_info));
+        loop->queueInLoop(std::bind(&HttpData::newEvent, req_info));//在这里将新的连接挂上树
     }
     m_acceptChannel->setEvents(EPOLLIN | EPOLLET);
 }

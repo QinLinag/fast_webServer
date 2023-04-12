@@ -45,7 +45,21 @@ threadFun。调用eventLoopThread的startLoop函数，然后在startLoop函数�
 同时startLoop函数返回m_loop。
 
 
+EventLoopThreadPool: 就是一个存放EventLoopThread的线程池，首先调用start
+函数，然后在start函数中会根据m_threadNum创建相应个数的EventLoopThread,同时
+每创建一个EventLoopThread,就会保存到EventLoopThreadPool的成员变量m_threads
+中，然后调用EventLoopThread.startLoop开始监听事件，并返回EventLoop存放
+到EventLoopThreadPool的成员变量m_loops中。然后在有新的客户端连接成功时，就会
+调用EventLoopThreadPool.getNextLoop,轮询的获取一个EventLoopThread的loop
+，然后将客户端的事件挂到loop上。
 
+
+Server: 就是一个httpServer服务器，Server有一个成员变量m_listenFd,就是服务器
+的socket fd,还有一个m_port服务器的端口。最重要的时有一个m_loop和
+m_acceptChannel,m_acceptChannel就是用处理监听客户端请求的，将m_acceptChannel
+挂到m_loop上。  还有一个成员变量是m_eventLoopThreadPool，每当m_acceptChannel
+处理一个新的客户端后，就会将客户端的client_fd,挂到m_eventLoopThreadPool
+的一个EentLoopThread上，
 
 
 

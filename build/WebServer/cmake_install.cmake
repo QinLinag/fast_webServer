@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/qinliang/webServer/build/WebServer/base/cmake_install.cmake")
+  include("/home/qinliang/webServer/build/WebServer/tests/cmake_install.cmake")
 
 endif()
 

@@ -39,9 +39,14 @@ int main(int argc, char** argv) {
 #ifndef _PTHREADS
     LOG << "_PTHREADS is not defined!";
 #endif
+    std::cout << "--------1" << std::endl;
     EventLoop mainLoop;
+    std::cout << "--------2" << std::endl;
     Server myHTTPServer(&mainLoop, threadNum, port);
+    std::cout << "--------3" << std::endl;
     myHTTPServer.start();
+    std::cout << "--------4" << std::endl;
     mainLoop.loop();   //在这里，server才开始监听客户端的请求。
+    std::cout << "--------5" << std::endl;
     return 0;
 }

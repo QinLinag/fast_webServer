@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named WebServer
+
+# Build rule for target.
+WebServer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WebServer
+.PHONY : WebServer
+
+# fast build rule for target.
+WebServer/fast:
+	$(MAKE) -f WebServer/CMakeFiles/WebServer.dir/build.make WebServer/CMakeFiles/WebServer.dir/build
+.PHONY : WebServer/fast
+
+#=============================================================================
 # Target rules for targets named libserver_base
 
 # Build rule for target.
@@ -136,6 +149,19 @@ LoggingTest/fast:
 	$(MAKE) -f WebServer/base/test/CMakeFiles/LoggingTest.dir/build.make WebServer/base/test/CMakeFiles/LoggingTest.dir/build
 .PHONY : LoggingTest/fast
 
+#=============================================================================
+# Target rules for targets named HTTPClient
+
+# Build rule for target.
+HTTPClient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HTTPClient
+.PHONY : HTTPClient
+
+# fast build rule for target.
+HTTPClient/fast:
+	$(MAKE) -f WebServer/tests/CMakeFiles/HTTPClient.dir/build.make WebServer/tests/CMakeFiles/HTTPClient.dir/build
+.PHONY : HTTPClient/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -144,8 +170,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... WebServer"
 	@echo "... libserver_base"
 	@echo "... LoggingTest"
+	@echo "... HTTPClient"
 .PHONY : help
 
 

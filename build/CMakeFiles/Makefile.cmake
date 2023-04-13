@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../WebServer/CMakeLists.txt"
   "../WebServer/base/CMakeLists.txt"
   "../WebServer/base/test/CMakeLists.txt"
+  "../WebServer/tests/CMakeLists.txt"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
@@ -43,10 +44,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "WebServer/CMakeFiles/CMakeDirectoryInformation.cmake"
   "WebServer/base/CMakeFiles/CMakeDirectoryInformation.cmake"
   "WebServer/base/test/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "WebServer/tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "WebServer/CMakeFiles/WebServer.dir/DependInfo.cmake"
   "WebServer/base/CMakeFiles/libserver_base.dir/DependInfo.cmake"
   "WebServer/base/test/CMakeFiles/LoggingTest.dir/DependInfo.cmake"
+  "WebServer/tests/CMakeFiles/HTTPClient.dir/DependInfo.cmake"
   )

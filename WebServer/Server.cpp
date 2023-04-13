@@ -16,9 +16,11 @@ Server::Server(EventLoop* loop, int threadNum, int port)
     , m_listenFd(socket_bind_listen(m_port)){
     m_acceptChannel->setFd(m_listenFd);
     handle_for_sigpipe();
+    std::cout << "at 19" << std::endl;
     if(setSocketNonBlocking(m_listenFd) < 0) {
         LOG << "set socket non block failed";
         perror("set socket non block failed");
+        std::cout << "at 23" << std::endl;
         abort();
     }
 }

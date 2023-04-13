@@ -79,7 +79,7 @@ void EventLoop::queueInLoop(Functor&& cb) {
         MutexLockGuard lock(m_mutex);
         m_pendingFunctors.emplace_back(std::move(cb));
     }
-    if(!isInLoopThread || m_callingPendingFunctors) {
+    if(!isInLoopThread() || m_callingPendingFunctors) {
         wakeup();
     }
 }

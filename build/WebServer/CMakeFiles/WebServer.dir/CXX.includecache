@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/qinliang/webServer/WebServer/Util.cpp
+Util.h
+/home/qinliang/webServer/WebServer/Util.h
+iostream
+-
+errno.h
+-
+fcntl.h
+-
+netinet/in.h
+-
+netinet/tcp.h
+-
+signal.h
+-
+string.h
+-
+sys/socket.h
+-
+unistd.h
+-
+
+/home/qinliang/webServer/WebServer/Util.h
+cstdlib
+-
+string
+-
+

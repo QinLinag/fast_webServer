@@ -16,11 +16,9 @@ Server::Server(EventLoop* loop, int threadNum, int port)
     , m_listenFd(socket_bind_listen(m_port)){
     m_acceptChannel->setFd(m_listenFd);
     handle_for_sigpipe();
-    std::cout << "at 19" << std::endl;
     if(setSocketNonBlocking(m_listenFd) < 0) {
         LOG << "set socket non block failed";
         perror("set socket non block failed");
-        std::cout << "at 23" << std::endl;
         abort();
     }
 }
@@ -36,6 +34,7 @@ void Server::start() {
 }
 
 void Server::handNewConn() {
+    std::cout << "handNewConn coming" << std::endl;
     struct sockaddr_in client_addr;
     memset(&client_addr, 0, sizeof(struct sockaddr_in));
     socklen_t client_addr_len = sizeof(client_addr);
@@ -54,11 +53,15 @@ void Server::handNewConn() {
             LOG << "Set non block failed";
             return;
         }
-        setSocketNodelay(accept_fd);
 
+        setSocketNodelay(accept_fd);
+        std::cout << "handNewConn shared_ptr" << std::endl;
         std::shared_ptr<HttpData> req_info(new HttpData(loop, accept_fd));
+        std::cout << "handNewConn 1" << std::endl;
         req_info->getChannel()->setHolder(req_info);
+        std::cout << "handNewConn 2" << std::endl;
         loop->queueInLoop(std::bind(&HttpData::newEvent, req_info));//在这里将新的连接挂上树
+        std::cout << "handNewConn 3" << std::endl;
     }
     m_acceptChannel->setEvents(EPOLLIN | EPOLLET);
 }

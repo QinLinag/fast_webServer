@@ -12,7 +12,7 @@
 
 #define MACXSIZE 1024
 #define IPADDRESS "127.0.0.1"
-#define SERV_PORT 8888
+#define SERV_PORT 6598
 #define FDSIZE 1024
 #define EPOLLEVENTS 20
 

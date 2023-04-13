@@ -1,0 +1,142 @@
+2023-04-13 16:14:13NNew connection from 127.0.0.1:52408--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-13 16:14:13NRequest: --/home/qinliang/webServer/WebServer/HttpData.cpp:172
+2023-04-13 16:14:13NFD= 14,  parse uri failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:200
+2023-04-13 16:14:15NNew connection from 127.0.0.1:52414--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-13 16:14:15NRequest:GET HTTP/1.1--/home/qinliang/webServer/WebServer/HttpData.cpp:172
+2023-04-13 16:14:15NFD= 14, GET HTTP/1.1parse uri failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:200
+2023-04-13 16:14:17NNew connection from 127.0.0.1:52418--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-13 16:14:17NRequest:GET / HTTP/1.1
+Host: 192.168.43.92:8888
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+
+--/home/qinliang/webServer/WebServer/HttpData.cpp:172
+2023-04-13 16:14:17NFD= 14, Host: 192.168.43.92:8888
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+
+parse headers failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:215
+2023-04-13 16:15:40NNew connection from 192.168.43.40:52017--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-13 16:15:40NRequest:GET / HTTP/1.1
+Host: 192.168.43.92:6598
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+--/home/qinliang/webServer/WebServer/HttpData.cpp:172
+2023-04-13 16:15:40NFD= 14, Host: 192.168.43.92:6598
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+parse headers failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:215
+2023-04-13 16:15:41NNew connection from 192.168.43.40:52016--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-13 16:15:41NRequest:GET /favicon.ico HTTP/1.1
+Host: 192.168.43.92:6598
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://192.168.43.92:6598/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+--/home/qinliang/webServer/WebServer/HttpData.cpp:172
+2023-04-13 16:15:41NFD= 14, Host: 192.168.43.92:6598
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://192.168.43.92:6598/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+parse headers failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:215
+2023-04-13 16:15:51NNew connection from 192.168.43.40:52032--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-13 16:15:51NNew connection from 192.168.43.40:52033--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-13 16:15:51NRequest:GET / HTTP/1.1
+Host: 192.168.43.92:6598
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+--/home/qinliang/webServer/WebServer/HttpData.cpp:172
+2023-04-13 16:15:51NFD= 14, Host: 192.168.43.92:6598
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+parse headers failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:215
+2023-04-13 16:15:51NRequest:GET /favicon.ico HTTP/1.1
+Host: 192.168.43.92:6598
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://192.168.43.92:6598/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+--/home/qinliang/webServer/WebServer/HttpData.cpp:172
+2023-04-13 16:15:51NFD= 16, Host: 192.168.43.92:6598
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://192.168.43.92:6598/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+parse headers failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:215
+2023-04-13 16:16:12NNew connection from 192.168.43.40:52059--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-13 16:16:12NNew connection from 192.168.43.40:52060--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-13 16:16:12NRequest:GET / HTTP/1.1
+Host: 192.168.43.92:6598
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+--/home/qinliang/webServer/WebServer/HttpData.cpp:172
+2023-04-13 16:16:12NFD= 14, Host: 192.168.43.92:6598
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+parse headers failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:215
+2023-04-13 16:16:12NRequest:GET /favicon.ico HTTP/1.1
+Host: 192.168.43.92:6598
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://192.168.43.92:6598/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+--/home/qinliang/webServer/WebServer/HttpData.cpp:172
+2023-04-13 16:16:12NFD= 16, Host: 192.168.43.92:6598
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://192.168.43.92:6598/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+
+parse headers failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:215

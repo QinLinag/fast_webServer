@@ -123,8 +123,8 @@ HttpData::HttpData(EventLoop* loop, int connfd)
     , m_state(STATE_PARSE_URI)
     , m_hState(H_START)
     , m_keepAlive(false){
-        
-    m_channel->setHolder(shared_from_this());
+    std::cout << "HttpData 构造函数" << std::endl;
+    std::cout << "HttpData setHolder" << std::endl;
     m_channel->setReadHandler(std::bind(&HttpData::handleRead, this));
     m_channel->setWriteHandler(std::bind(&HttpData::handleWrite,this));
     m_channel->setConnHandler(std::bind(&HttpData::handleConn, this));

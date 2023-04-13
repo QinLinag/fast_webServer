@@ -40,10 +40,11 @@ struct ThreadData {
     ThreadData(const ThreadFunc& func, 
         const std::string& name, pid_t* tid,
         CountDownLatch* latch) 
-        : m_func(func)
-        , m_name(name)
+        : m_name(name)
         , m_tid(tid)
         , m_latch(latch){
+    std::cout << "m_func==func at ThreadData" << std::endl;
+    m_func = func;
     }
 
     void runInThread() {
@@ -51,10 +52,8 @@ struct ThreadData {
         m_tid = nullptr;
         m_latch->countDown();
         m_latch = nullptr;
-
         CurrentThread::t_threadName = m_name.empty() ? "Thread" : m_name.c_str();
         prctl(PR_SET_NAME, CurrentThread::t_threadName);
-
         m_func();
         CurrentThread::t_threadName = "finished";
     }
@@ -91,7 +90,7 @@ void Thread::start() {
     m_started = true;
     ThreadData* data = new ThreadData(m_func, m_name, &m_tid, &m_latch);
     int rt = pthread_create(&m_pthread, nullptr, &startThread, data);
-    if(rt == 0) {
+    if(rt == -1) {
         m_started = false;
         delete data;
     } else {

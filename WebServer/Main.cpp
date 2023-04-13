@@ -6,7 +6,7 @@
 
 int main(int argc, char** argv) {
     int threadNum = 4;
-    int port = 80;
+    int port = 6598;
     std::string logPath = "./WebServer.log";
 
     //parse args

@@ -7,7 +7,7 @@
 EventLoopThread::EventLoopThread() 
     : m_loop(nullptr)
     , m_exiting(false)
-    , m_thread(std::bind(&EventLoopThread::threadFunc, this))
+    , m_thread(std::bind(&EventLoopThread::threadFunc, this), "EventLoopThread")
     , m_mutex()
     , m_cond(m_mutex){
 }
@@ -34,13 +34,14 @@ EventLoop* EventLoopThread::startLoop() {
 }
 
 void EventLoopThread::threadFunc() {
+    EventLoop loop;
     {
         MutexLockGuard lock(m_mutex);
-        m_loop = new EventLoop();
+        m_loop = &loop;
         m_cond.notify();
     }
     m_loop->loop();
-    delete m_loop;
+    // delete m_loop;
     m_loop = nullptr;
 }
 

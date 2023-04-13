@@ -154,9 +154,8 @@ void handle_for_sigpipe() {
 }
 
 int setSocketNonBlocking(int fd) {
-    std::cout << "lalala"  << fd<< std::endl;
+    // std::cout << "lalala"  << fd<< std::endl;
     int flag = fcntl(fd, F_GETFL, 0);
-    std::cout << "lalala" << std::endl;
     if(flag == -1) {
         return -1;
     }
@@ -164,7 +163,7 @@ int setSocketNonBlocking(int fd) {
     if(fcntl(fd, F_SETFL, flag) == -1) {
         return -1;
     }
-    std::cout << "lalala" << std::endl;
+    // std::cout << "lalala" << std::endl;
     return 0;
 }
 

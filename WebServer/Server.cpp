@@ -34,7 +34,7 @@ void Server::start() {
 }
 
 void Server::handNewConn() {
-    std::cout << "handNewConn coming" << std::endl;
+    // std::cout << "handNewConn coming" << std::endl;
     struct sockaddr_in client_addr;
     memset(&client_addr, 0, sizeof(struct sockaddr_in));
     socklen_t client_addr_len = sizeof(client_addr);
@@ -55,13 +55,13 @@ void Server::handNewConn() {
         }
 
         setSocketNodelay(accept_fd);
-        std::cout << "handNewConn shared_ptr" << std::endl;
+        // std::cout << "handNewConn shared_ptr" << std::endl;
         std::shared_ptr<HttpData> req_info(new HttpData(loop, accept_fd));
-        std::cout << "handNewConn 1" << std::endl;
+        // std::cout << "handNewConn 1" << std::endl;
         req_info->getChannel()->setHolder(req_info);
-        std::cout << "handNewConn 2" << std::endl;
+        // std::cout << "handNewConn 2" << std::endl;
         loop->queueInLoop(std::bind(&HttpData::newEvent, req_info));//在这里将新的连接挂上树
-        std::cout << "handNewConn 3" << std::endl;
+        // std::cout << "handNewConn 3" << std::endl;
     }
     m_acceptChannel->setEvents(EPOLLIN | EPOLLET);
 }

@@ -43,7 +43,7 @@ struct ThreadData {
         : m_name(name)
         , m_tid(tid)
         , m_latch(latch){
-    std::cout << "m_func==func at ThreadData" << std::endl;
+    // std::cout << "m_func==func at ThreadData" << std::endl;
     m_func = func;
     }
 

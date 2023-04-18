@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qinliang/webServer
+CMAKE_SOURCE_DIR = /home/qinliang/myCppWorkPlace/webServer/webServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qinliang/webServer/build
+CMAKE_BINARY_DIR = /home/qinliang/myCppWorkPlace/webServer/webServer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/qinliang/webServer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/qinliang/webServer/build/CMakeFiles /home/qinliang/webServer/build/WebServer/base/CMakeFiles/progress.marks
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qinliang/webServer/build/CMakeFiles 0
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base/CMakeFiles/progress.marks
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/clean
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/preinstall
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/preinstall
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/qinliang/webServer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 WebServer/base/CMakeFiles/libserver_base.dir/rule:
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/CMakeFiles/libserver_base.dir/rule
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/base/CMakeFiles/libserver_base.dir/rule
 .PHONY : WebServer/base/CMakeFiles/libserver_base.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ libserver_base: WebServer/base/CMakeFiles/libserver_base.dir/rule
 
 # fast build rule for target.
 libserver_base/fast:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/build
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/build
 .PHONY : libserver_base/fast
 
 AsyncLogging.o: AsyncLogging.cpp.o
@@ -131,7 +131,7 @@ AsyncLogging.o: AsyncLogging.cpp.o
 
 # target to build an object file
 AsyncLogging.cpp.o:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.o
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.o
 .PHONY : AsyncLogging.cpp.o
 
 AsyncLogging.i: AsyncLogging.cpp.i
@@ -140,7 +140,7 @@ AsyncLogging.i: AsyncLogging.cpp.i
 
 # target to preprocess a source file
 AsyncLogging.cpp.i:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.i
 .PHONY : AsyncLogging.cpp.i
 
 AsyncLogging.s: AsyncLogging.cpp.s
@@ -149,7 +149,7 @@ AsyncLogging.s: AsyncLogging.cpp.s
 
 # target to generate assembly for a file
 AsyncLogging.cpp.s:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.s
 .PHONY : AsyncLogging.cpp.s
 
 CountDownLatch.o: CountDownLatch.cpp.o
@@ -158,7 +158,7 @@ CountDownLatch.o: CountDownLatch.cpp.o
 
 # target to build an object file
 CountDownLatch.cpp.o:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o
 .PHONY : CountDownLatch.cpp.o
 
 CountDownLatch.i: CountDownLatch.cpp.i
@@ -167,7 +167,7 @@ CountDownLatch.i: CountDownLatch.cpp.i
 
 # target to preprocess a source file
 CountDownLatch.cpp.i:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i
 .PHONY : CountDownLatch.cpp.i
 
 CountDownLatch.s: CountDownLatch.cpp.s
@@ -176,7 +176,7 @@ CountDownLatch.s: CountDownLatch.cpp.s
 
 # target to generate assembly for a file
 CountDownLatch.cpp.s:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s
 .PHONY : CountDownLatch.cpp.s
 
 FileUtil.o: FileUtil.cpp.o
@@ -185,7 +185,7 @@ FileUtil.o: FileUtil.cpp.o
 
 # target to build an object file
 FileUtil.cpp.o:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.o
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.o
 .PHONY : FileUtil.cpp.o
 
 FileUtil.i: FileUtil.cpp.i
@@ -194,7 +194,7 @@ FileUtil.i: FileUtil.cpp.i
 
 # target to preprocess a source file
 FileUtil.cpp.i:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.i
 .PHONY : FileUtil.cpp.i
 
 FileUtil.s: FileUtil.cpp.s
@@ -203,7 +203,7 @@ FileUtil.s: FileUtil.cpp.s
 
 # target to generate assembly for a file
 FileUtil.cpp.s:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.s
 .PHONY : FileUtil.cpp.s
 
 LogFile.o: LogFile.cpp.o
@@ -212,7 +212,7 @@ LogFile.o: LogFile.cpp.o
 
 # target to build an object file
 LogFile.cpp.o:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.o
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.o
 .PHONY : LogFile.cpp.o
 
 LogFile.i: LogFile.cpp.i
@@ -221,7 +221,7 @@ LogFile.i: LogFile.cpp.i
 
 # target to preprocess a source file
 LogFile.cpp.i:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.i
 .PHONY : LogFile.cpp.i
 
 LogFile.s: LogFile.cpp.s
@@ -230,7 +230,7 @@ LogFile.s: LogFile.cpp.s
 
 # target to generate assembly for a file
 LogFile.cpp.s:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.s
 .PHONY : LogFile.cpp.s
 
 LogStream.o: LogStream.cpp.o
@@ -239,7 +239,7 @@ LogStream.o: LogStream.cpp.o
 
 # target to build an object file
 LogStream.cpp.o:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.o
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.o
 .PHONY : LogStream.cpp.o
 
 LogStream.i: LogStream.cpp.i
@@ -248,7 +248,7 @@ LogStream.i: LogStream.cpp.i
 
 # target to preprocess a source file
 LogStream.cpp.i:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.i
 .PHONY : LogStream.cpp.i
 
 LogStream.s: LogStream.cpp.s
@@ -257,7 +257,7 @@ LogStream.s: LogStream.cpp.s
 
 # target to generate assembly for a file
 LogStream.cpp.s:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.s
 .PHONY : LogStream.cpp.s
 
 Logging.o: Logging.cpp.o
@@ -266,7 +266,7 @@ Logging.o: Logging.cpp.o
 
 # target to build an object file
 Logging.cpp.o:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o
 .PHONY : Logging.cpp.o
 
 Logging.i: Logging.cpp.i
@@ -275,7 +275,7 @@ Logging.i: Logging.cpp.i
 
 # target to preprocess a source file
 Logging.cpp.i:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.i
 .PHONY : Logging.cpp.i
 
 Logging.s: Logging.cpp.s
@@ -284,7 +284,7 @@ Logging.s: Logging.cpp.s
 
 # target to generate assembly for a file
 Logging.cpp.s:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.s
 .PHONY : Logging.cpp.s
 
 Thread.o: Thread.cpp.o
@@ -293,7 +293,7 @@ Thread.o: Thread.cpp.o
 
 # target to build an object file
 Thread.cpp.o:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o
 .PHONY : Thread.cpp.o
 
 Thread.i: Thread.cpp.i
@@ -302,7 +302,7 @@ Thread.i: Thread.cpp.i
 
 # target to preprocess a source file
 Thread.cpp.i:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.i
 .PHONY : Thread.cpp.i
 
 Thread.s: Thread.cpp.s
@@ -311,7 +311,7 @@ Thread.s: Thread.cpp.s
 
 # target to generate assembly for a file
 Thread.cpp.s:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/base/CMakeFiles/libserver_base.dir/build.make WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.s
 .PHONY : Thread.cpp.s
 
 # Help Target
@@ -355,6 +355,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/qinliang/webServer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

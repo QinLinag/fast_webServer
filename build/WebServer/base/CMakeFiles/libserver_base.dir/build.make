@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qinliang/webServer
+CMAKE_SOURCE_DIR = /home/qinliang/myCppWorkPlace/webServer/webServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qinliang/webServer/build
+CMAKE_BINARY_DIR = /home/qinliang/myCppWorkPlace/webServer/webServer/build
 
 # Include any dependencies generated for this target.
 include WebServer/base/CMakeFiles/libserver_base.dir/depend.make
@@ -59,94 +59,94 @@ include WebServer/base/CMakeFiles/libserver_base.dir/flags.make
 
 WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.o: WebServer/base/CMakeFiles/libserver_base.dir/flags.make
 WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.o: ../WebServer/base/AsyncLogging.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.o"
-	cd /home/qinliang/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/AsyncLogging.cpp.o -c /home/qinliang/webServer/WebServer/base/AsyncLogging.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.o"
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/AsyncLogging.cpp.o -c /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/AsyncLogging.cpp
 
 WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/AsyncLogging.cpp.i"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/webServer/WebServer/base/AsyncLogging.cpp > CMakeFiles/libserver_base.dir/AsyncLogging.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/AsyncLogging.cpp > CMakeFiles/libserver_base.dir/AsyncLogging.cpp.i
 
 WebServer/base/CMakeFiles/libserver_base.dir/AsyncLogging.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/AsyncLogging.cpp.s"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/webServer/WebServer/base/AsyncLogging.cpp -o CMakeFiles/libserver_base.dir/AsyncLogging.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/AsyncLogging.cpp -o CMakeFiles/libserver_base.dir/AsyncLogging.cpp.s
 
 WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o: WebServer/base/CMakeFiles/libserver_base.dir/flags.make
 WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o: ../WebServer/base/CountDownLatch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o"
-	cd /home/qinliang/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o -c /home/qinliang/webServer/WebServer/base/CountDownLatch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o"
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/CountDownLatch.cpp.o -c /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/CountDownLatch.cpp
 
 WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/webServer/WebServer/base/CountDownLatch.cpp > CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/CountDownLatch.cpp > CMakeFiles/libserver_base.dir/CountDownLatch.cpp.i
 
 WebServer/base/CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/webServer/WebServer/base/CountDownLatch.cpp -o CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/CountDownLatch.cpp -o CMakeFiles/libserver_base.dir/CountDownLatch.cpp.s
 
 WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.o: WebServer/base/CMakeFiles/libserver_base.dir/flags.make
 WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.o: ../WebServer/base/FileUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.o"
-	cd /home/qinliang/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/FileUtil.cpp.o -c /home/qinliang/webServer/WebServer/base/FileUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.o"
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/FileUtil.cpp.o -c /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/FileUtil.cpp
 
 WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/FileUtil.cpp.i"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/webServer/WebServer/base/FileUtil.cpp > CMakeFiles/libserver_base.dir/FileUtil.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/FileUtil.cpp > CMakeFiles/libserver_base.dir/FileUtil.cpp.i
 
 WebServer/base/CMakeFiles/libserver_base.dir/FileUtil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/FileUtil.cpp.s"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/webServer/WebServer/base/FileUtil.cpp -o CMakeFiles/libserver_base.dir/FileUtil.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/FileUtil.cpp -o CMakeFiles/libserver_base.dir/FileUtil.cpp.s
 
 WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.o: WebServer/base/CMakeFiles/libserver_base.dir/flags.make
 WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.o: ../WebServer/base/LogFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.o"
-	cd /home/qinliang/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/LogFile.cpp.o -c /home/qinliang/webServer/WebServer/base/LogFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.o"
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/LogFile.cpp.o -c /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/LogFile.cpp
 
 WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/LogFile.cpp.i"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/webServer/WebServer/base/LogFile.cpp > CMakeFiles/libserver_base.dir/LogFile.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/LogFile.cpp > CMakeFiles/libserver_base.dir/LogFile.cpp.i
 
 WebServer/base/CMakeFiles/libserver_base.dir/LogFile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/LogFile.cpp.s"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/webServer/WebServer/base/LogFile.cpp -o CMakeFiles/libserver_base.dir/LogFile.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/LogFile.cpp -o CMakeFiles/libserver_base.dir/LogFile.cpp.s
 
 WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o: WebServer/base/CMakeFiles/libserver_base.dir/flags.make
 WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o: ../WebServer/base/Logging.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o"
-	cd /home/qinliang/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/Logging.cpp.o -c /home/qinliang/webServer/WebServer/base/Logging.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.o"
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/Logging.cpp.o -c /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Logging.cpp
 
 WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/Logging.cpp.i"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/webServer/WebServer/base/Logging.cpp > CMakeFiles/libserver_base.dir/Logging.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Logging.cpp > CMakeFiles/libserver_base.dir/Logging.cpp.i
 
 WebServer/base/CMakeFiles/libserver_base.dir/Logging.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/Logging.cpp.s"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/webServer/WebServer/base/Logging.cpp -o CMakeFiles/libserver_base.dir/Logging.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Logging.cpp -o CMakeFiles/libserver_base.dir/Logging.cpp.s
 
 WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.o: WebServer/base/CMakeFiles/libserver_base.dir/flags.make
 WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.o: ../WebServer/base/LogStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.o"
-	cd /home/qinliang/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/LogStream.cpp.o -c /home/qinliang/webServer/WebServer/base/LogStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.o"
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/LogStream.cpp.o -c /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/LogStream.cpp
 
 WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/LogStream.cpp.i"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/webServer/WebServer/base/LogStream.cpp > CMakeFiles/libserver_base.dir/LogStream.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/LogStream.cpp > CMakeFiles/libserver_base.dir/LogStream.cpp.i
 
 WebServer/base/CMakeFiles/libserver_base.dir/LogStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/LogStream.cpp.s"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/webServer/WebServer/base/LogStream.cpp -o CMakeFiles/libserver_base.dir/LogStream.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/LogStream.cpp -o CMakeFiles/libserver_base.dir/LogStream.cpp.s
 
 WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o: WebServer/base/CMakeFiles/libserver_base.dir/flags.make
 WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o: ../WebServer/base/Thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o"
-	cd /home/qinliang/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/Thread.cpp.o -c /home/qinliang/webServer/WebServer/base/Thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o"
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/libserver_base.dir/Thread.cpp.o -c /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Thread.cpp
 
 WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/libserver_base.dir/Thread.cpp.i"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/webServer/WebServer/base/Thread.cpp > CMakeFiles/libserver_base.dir/Thread.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Thread.cpp > CMakeFiles/libserver_base.dir/Thread.cpp.i
 
 WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/libserver_base.dir/Thread.cpp.s"
-	cd /home/qinliang/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/webServer/WebServer/base/Thread.cpp -o CMakeFiles/libserver_base.dir/Thread.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Thread.cpp -o CMakeFiles/libserver_base.dir/Thread.cpp.s
 
 # Object files for target libserver_base
 libserver_base_OBJECTS = \
@@ -170,9 +170,9 @@ WebServer/base/libserver_base.a: WebServer/base/CMakeFiles/libserver_base.dir/Lo
 WebServer/base/libserver_base.a: WebServer/base/CMakeFiles/libserver_base.dir/Thread.cpp.o
 WebServer/base/libserver_base.a: WebServer/base/CMakeFiles/libserver_base.dir/build.make
 WebServer/base/libserver_base.a: WebServer/base/CMakeFiles/libserver_base.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qinliang/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libserver_base.a"
-	cd /home/qinliang/webServer/build/WebServer/base && $(CMAKE_COMMAND) -P CMakeFiles/libserver_base.dir/cmake_clean_target.cmake
-	cd /home/qinliang/webServer/build/WebServer/base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libserver_base.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libserver_base.a"
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && $(CMAKE_COMMAND) -P CMakeFiles/libserver_base.dir/cmake_clean_target.cmake
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/libserver_base.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 WebServer/base/CMakeFiles/libserver_base.dir/build: WebServer/base/libserver_base.a
@@ -180,10 +180,10 @@ WebServer/base/CMakeFiles/libserver_base.dir/build: WebServer/base/libserver_bas
 .PHONY : WebServer/base/CMakeFiles/libserver_base.dir/build
 
 WebServer/base/CMakeFiles/libserver_base.dir/clean:
-	cd /home/qinliang/webServer/build/WebServer/base && $(CMAKE_COMMAND) -P CMakeFiles/libserver_base.dir/cmake_clean.cmake
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base && $(CMAKE_COMMAND) -P CMakeFiles/libserver_base.dir/cmake_clean.cmake
 .PHONY : WebServer/base/CMakeFiles/libserver_base.dir/clean
 
 WebServer/base/CMakeFiles/libserver_base.dir/depend:
-	cd /home/qinliang/webServer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qinliang/webServer /home/qinliang/webServer/WebServer/base /home/qinliang/webServer/build /home/qinliang/webServer/build/WebServer/base /home/qinliang/webServer/build/WebServer/base/CMakeFiles/libserver_base.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qinliang/myCppWorkPlace/webServer/webServer /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base /home/qinliang/myCppWorkPlace/webServer/webServer/build /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/base/CMakeFiles/libserver_base.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : WebServer/base/CMakeFiles/libserver_base.dir/depend
 

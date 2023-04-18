@@ -1,4 +1,4 @@
-# Install script for directory: /home/qinliang/webServer/WebServer/base/test
+# Install script for directory: /home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

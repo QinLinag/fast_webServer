@@ -235,3 +235,9 @@ Accept-Language: zh-CN,zh;q=0.9
 
 parse headers failed****--/home/qinliang/webServer/WebServer/HttpData.cpp:213
 2023-04-13 16:26:54NNew connection from 192.168.43.40:63434--/home/qinliang/webServer/WebServer/Server.cpp:45
+2023-04-18 11:16:25NNew connection from 127.0.0.1:32804--/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/Server.cpp:45
+2023-04-18 11:16:25NRequest: --/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/HttpData.cpp:170
+2023-04-18 11:16:25NFD= 14,  parse uri failed****--/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/HttpData.cpp:198
+2023-04-18 11:16:27NNew connection from 127.0.0.1:32820--/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/Server.cpp:45
+2023-04-18 11:16:27NRequest:GET HTTP/1.1--/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/HttpData.cpp:170
+2023-04-18 11:16:27NFD= 14, GET HTTP/1.1parse uri failed****--/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/HttpData.cpp:198

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/qinliang/webServer/WebServer/base/Condition.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Condition.h
 errno.h
 -
 pthread.h
@@ -16,19 +16,19 @@ time.h
 cstdint
 -
 MutexLock.h
-/home/qinliang/webServer/WebServer/base/MutexLock.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/MutexLock.h
 noncopyable.h
-/home/qinliang/webServer/WebServer/base/noncopyable.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/noncopyable.h
 
-/home/qinliang/webServer/WebServer/base/CountDownLatch.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/CountDownLatch.h
 Condition.h
-/home/qinliang/webServer/WebServer/base/Condition.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Condition.h
 MutexLock.h
-/home/qinliang/webServer/WebServer/base/MutexLock.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/MutexLock.h
 noncopyable.h
-/home/qinliang/webServer/WebServer/base/noncopyable.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/noncopyable.h
 
-/home/qinliang/webServer/WebServer/base/LogStream.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/LogStream.h
 assert.h
 -
 string.h
@@ -36,9 +36,9 @@ string.h
 string
 -
 noncopyable.h
-/home/qinliang/webServer/WebServer/base/noncopyable.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/noncopyable.h
 
-/home/qinliang/webServer/WebServer/base/Logging.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Logging.h
 pthread.h
 -
 stdio.h
@@ -48,17 +48,17 @@ string.h
 string
 -
 LogStream.h
-/home/qinliang/webServer/WebServer/base/LogStream.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/LogStream.h
 
-/home/qinliang/webServer/WebServer/base/MutexLock.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/MutexLock.h
 pthread.h
 -
 cstdio
 -
 noncopyable.h
-/home/qinliang/webServer/WebServer/base/noncopyable.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/noncopyable.h
 
-/home/qinliang/webServer/WebServer/base/Thread.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Thread.h
 pthread.h
 -
 sys/syscall.h
@@ -72,17 +72,17 @@ memory
 string
 -
 CountDownLatch.h
-/home/qinliang/webServer/WebServer/base/CountDownLatch.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/CountDownLatch.h
 noncopyable.h
-/home/qinliang/webServer/WebServer/base/noncopyable.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/noncopyable.h
 
-/home/qinliang/webServer/WebServer/base/noncopyable.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/noncopyable.h
 
-/home/qinliang/webServer/WebServer/base/test/LoggingTest.cpp
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/test/LoggingTest.cpp
 ../Logging.h
-/home/qinliang/webServer/WebServer/base/Logging.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Logging.h
 ../Thread.h
-/home/qinliang/webServer/WebServer/base/Thread.h
+/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/base/Thread.h
 string
 -
 unistd.h

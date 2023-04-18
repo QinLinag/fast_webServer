@@ -6,5 +6,5 @@ CXX_FLAGS = -g -Wall -std=c++11 -D_PTHREADS -Wno-unused-parameter -O0
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/qinliang/webServer/base 
+CXX_INCLUDES = -I/home/qinliang/myCppWorkPlace/webServer/webServer/base 
 

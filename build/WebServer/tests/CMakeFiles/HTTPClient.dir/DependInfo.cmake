@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/qinliang/webServer/WebServer/tests/HTTPClient.cpp" "/home/qinliang/webServer/build/WebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.o"
+  "/home/qinliang/myCppWorkPlace/webServer/webServer/WebServer/tests/HTTPClient.cpp" "/home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

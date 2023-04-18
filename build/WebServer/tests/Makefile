@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qinliang/webServer
+CMAKE_SOURCE_DIR = /home/qinliang/myCppWorkPlace/webServer/webServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qinliang/webServer/build
+CMAKE_BINARY_DIR = /home/qinliang/myCppWorkPlace/webServer/webServer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/qinliang/webServer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/qinliang/webServer/build/CMakeFiles /home/qinliang/webServer/build/WebServer/tests/CMakeFiles/progress.marks
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/qinliang/webServer/build/CMakeFiles 0
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles /home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/tests/CMakeFiles/progress.marks
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/qinliang/myCppWorkPlace/webServer/webServer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/clean
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/preinstall
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/preinstall
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/qinliang/webServer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 WebServer/tests/CMakeFiles/HTTPClient.dir/rule:
-	cd /home/qinliang/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/CMakeFiles/HTTPClient.dir/rule
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f CMakeFiles/Makefile2 WebServer/tests/CMakeFiles/HTTPClient.dir/rule
 .PHONY : WebServer/tests/CMakeFiles/HTTPClient.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ HTTPClient: WebServer/tests/CMakeFiles/HTTPClient.dir/rule
 
 # fast build rule for target.
 HTTPClient/fast:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/tests/CMakeFiles/HTTPClient.dir/build.make WebServer/tests/CMakeFiles/HTTPClient.dir/build
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/tests/CMakeFiles/HTTPClient.dir/build.make WebServer/tests/CMakeFiles/HTTPClient.dir/build
 .PHONY : HTTPClient/fast
 
 HTTPClient.o: HTTPClient.cpp.o
@@ -131,7 +131,7 @@ HTTPClient.o: HTTPClient.cpp.o
 
 # target to build an object file
 HTTPClient.cpp.o:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/tests/CMakeFiles/HTTPClient.dir/build.make WebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.o
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/tests/CMakeFiles/HTTPClient.dir/build.make WebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.o
 .PHONY : HTTPClient.cpp.o
 
 HTTPClient.i: HTTPClient.cpp.i
@@ -140,7 +140,7 @@ HTTPClient.i: HTTPClient.cpp.i
 
 # target to preprocess a source file
 HTTPClient.cpp.i:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/tests/CMakeFiles/HTTPClient.dir/build.make WebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.i
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/tests/CMakeFiles/HTTPClient.dir/build.make WebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.i
 .PHONY : HTTPClient.cpp.i
 
 HTTPClient.s: HTTPClient.cpp.s
@@ -149,7 +149,7 @@ HTTPClient.s: HTTPClient.cpp.s
 
 # target to generate assembly for a file
 HTTPClient.cpp.s:
-	cd /home/qinliang/webServer/build && $(MAKE) -f WebServer/tests/CMakeFiles/HTTPClient.dir/build.make WebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.s
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(MAKE) -f WebServer/tests/CMakeFiles/HTTPClient.dir/build.make WebServer/tests/CMakeFiles/HTTPClient.dir/HTTPClient.cpp.s
 .PHONY : HTTPClient.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/qinliang/webServer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/qinliang/myCppWorkPlace/webServer/webServer/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

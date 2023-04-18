@@ -1,4 +1,4 @@
-# Install script for directory: /home/qinliang/webServer
+# Install script for directory: /home/qinliang/myCppWorkPlace/webServer/webServer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/qinliang/webServer/build/WebServer/cmake_install.cmake")
+  include("/home/qinliang/myCppWorkPlace/webServer/webServer/build/WebServer/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/qinliang/webServer/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/qinliang/myCppWorkPlace/webServer/webServer/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
